@@ -1,0 +1,187 @@
+{
+  "appTitle": "Ethiopian Calendar",
+  "bahreHassab": "Bahre Hassab",
+  
+  "navigation": {
+    "calendar": "Calendar",
+    "yearInfo": "Year Info",
+    "settings": "Settings"
+  },
+  
+  "calendar": {
+    "today": "Today",
+    "month": "Month",
+    "week": "Week",
+    "day": "Day",
+    "view": "View",
+    "noEvents": "No events",
+    "addEvent": "Add Event"
+  },
+  
+  "monthNames": {
+    "ethiopian": {
+      "meskerem": "Meskerem",
+      "tikimt": "Tikimt",
+      "hidar": "Hidar",
+      "tahsas": "Tahsas",
+      "tir": "Tir",
+      "yekatit": "Yekatit",
+      "megabit": "Megabit",
+      "miyazya": "Miyazya",
+      "ginbot": "Ginbot",
+      "sene": "Sene",
+      "hamle": "Hamle",
+      "nehase": "Nehase",
+      "pagume": "Pagume"
+    },
+    "gregorian": {
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    }
+  },
+  
+  "dayNames": {
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday"
+  },
+  
+  "evangelists": {
+    "matewos": "Year of Matthew",
+    "markos": "Year of Mark",
+    "lukas": "Year of Luke",
+    "yohannes": "Year of John"
+  },
+  
+  "holidays": {
+    "gena": "Genna (Ethiopian Christmas)",
+    "meskel": "Meskel (Finding of the True Cross)",
+    "timket": "Timket (Epiphany)",
+    "nineveh": "Nineveh Fast",
+    "abiyTsome": "Abiy Tsome (Great Fast/Lent)",
+    "debreZeyit": "Debre Zeit",
+    "hossana": "Hosanna (Palm Sunday)",
+    "siklet": "Siklet (Good Friday)",
+    "tinsaye": "Tinsaye (Resurrection/Easter)",
+    "rikbeKahnat": "Rikbe Kahnat",
+    "erget": "Erget (Ascension)",
+    "peraklitos": "Peraklitos (Pentecost)",
+    "tsomeHawaryat": "Fast of the Holy Apostles",
+    "tsomeDihnet": "Fast of Salvation (Wednesday and Friday)"
+  },
+  
+  "yearInfo": {
+    "title": "Year Information",
+    "evangelist": "Evangelist",
+    "yearStartDay": "Year Start Day",
+    "leapYear": "Leap Year",
+    "pagume": "Pagume",
+    "holidaysAndFasts": "Holidays and Fasts"
+  },
+  
+  "events": {
+    "title": "Title",
+    "description": "Description",
+    "date": "Date",
+    "time": "Time",
+    "allDay": "All Day",
+    "reminder": "Reminder",
+    "noReminder": "No Reminder",
+    "reminder15min": "15 minutes before",
+    "reminder1hour": "1 hour before",
+    "reminder1day": "1 day before",
+    "create": "Create Event",
+    "edit": "Edit Event",
+    "delete": "Delete Event",
+    "save": "Save",
+    "cancel": "Cancel",
+    "deleteConfirm": "Are you sure you want to delete this event?",
+    "eventDetails": "Event Details"
+  },
+  
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
+    "calendar": "Calendar",
+    "defaultCalendar": "Default Calendar",
+    "ethiopian": "Ethiopian",
+    "gregorian": "Gregorian",
+    "sync": "Sync",
+    "deviceCalendarSync": "Device Calendar Sync",
+    "syncNow": "Sync Now",
+    "autoSync": "Auto Sync",
+    "lastSync": "Last Sync",
+    "notifications": "Notifications",
+    "holidayNotifications": "Holiday Notifications",
+    "about": "About",
+    "version": "Version"
+  },
+  
+  "dateConverter": {
+    "title": "Date Converter",
+    "ethiopian": "Ethiopian Date",
+    "gregorian": "Gregorian Date",
+    "convert": "Convert"
+  },
+  
+  "bahreHassab": {
+    "title": "Bahre Hassab",
+    "ameteAlem": "Amete Alem",
+    "meteneRabiet": "Metene Rabiet",
+    "tinteKemer": "Tinte Kemer",
+    "medeb": "Medeb",
+    "wenber": "Wenber",
+    "abektie": "Abektie",
+    "metqi": "Metqi",
+    "tewsak": "Tewsak",
+    "mebajaHamer": "Mebaja Hamer",
+    "bealeMetqi": "Beale Metqi"
+  },
+  
+  "common": {
+    "ok": "OK",
+    "yes": "Yes",
+    "no": "No",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "retry": "Retry"
+  },
+  
+  "errors": {
+    "generic": "An error occurred",
+    "network": "Network error",
+    "permission": "Permission denied",
+    "notFound": "Not found",
+    "invalidInput": "Invalid input"
+  },
+  
+  "validation": {
+    "required": "This field is required",
+    "invalidDate": "Invalid date",
+    "invalidTime": "Invalid time"
+  }
+}
+

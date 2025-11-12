@@ -1,14 +1,29 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 
-import 'screens/home.dart';
+import 'providers/locale_provider.dart';
+import 'providers/theme_provider.dart';
+import 'screens/calendar/calendar_home.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-      .then((_) {
-    runApp(const MyApp());
-  });
+  
+  // Initialize easy_localization
+  await EasyLocalization.ensureInitialized();
+  
+  // Set portrait orientation
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [Locale('en'), Locale('am'), Locale('om')],
+      path: 'assets/translations',
+      fallbackLocale: const Locale('en'),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -16,13 +31,33 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
-        useMaterial3: true,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ChangeNotifierProvider(create: (_) => LocaleProvider()),
+      ],
+      child: Consumer2<ThemeProvider, LocaleProvider>(
+        builder: (context, themeProvider, localeProvider, _) {
+          return MaterialApp(
+            title: 'Ethiopian Calendar',
+            debugShowCheckedModeBanner: false,
+            
+            // Localization
+            localizationsDelegates: context.localizationDelegates,
+            supportedLocales: context.supportedLocales,
+            locale: localeProvider.locale ?? context.locale,
+            
+            // Theme
+            theme: themeProvider.lightTheme,
+            darkTheme: themeProvider.darkTheme,
+            themeMode: themeProvider.themeMode,
+            
+            // Home
+            home: const CalendarHomeScreen(),
+          );
+        },
       ),
-      home: const MyHomePage(),
     );
   }
 }
+
