@@ -1,3 +1,6 @@
+import '../models/ethiopian_date.dart';
+import 'calendar_utils.dart';
+
 class DateConverter {
         DateTime ethiopianToGregorian(int ethYear, int ethMonth, int ethDay) {
         // Ethiopian year starts on September 11 (or 12 in leap years)
@@ -27,13 +30,13 @@ class DateConverter {
         daysFromNewYear += ethDay - 1;
 
         // Calculate Gregorian date
-        DateTime ethNewYear = DateTime(gregYear, 9, newYearDay);
+        DateTime ethNewYear = DateTime(baseGregYear, 9, newYearDay);
         DateTime gregDate = ethNewYear.add(Duration(days: daysFromNewYear));
 
         // Adjust year if we've crossed into next Gregorian year
         if (gregDate.month < 9 || (gregDate.month == 9 && gregDate.day < newYearDay)) {
-            gregYear+;
-            ethNewYear = DateTime(gregYear, 9, newYearDay);
+            baseGregYear++;
+            ethNewYear = DateTime(baseGregYear, 9, newYearDay);
             gregDate = ethNewYear.add(Duration(days: daysFromNewYear));
         }
 

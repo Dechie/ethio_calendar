@@ -9,7 +9,7 @@ class EthiopianDate {
         required this.day,
     });
 
-    bool get isLeapYear() {
+    bool get isLeapYear {
         // Ethiopian leap year occurs every 4 years
         // Year of Luke(Lukas) is a leap year.
         return (year + 5500) % 4 == 3; 

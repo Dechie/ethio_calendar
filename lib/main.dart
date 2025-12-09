@@ -9,13 +9,13 @@ import 'screens/calendar/calendar_home.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   // Initialize easy_localization
   await EasyLocalization.ensureInitialized();
-  
+
   // Set portrait orientation
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  
+
   runApp(
     EasyLocalization(
       supportedLocales: const [Locale('en'), Locale('am'), Locale('om')],
@@ -41,17 +41,17 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             title: 'Ethiopian Calendar',
             debugShowCheckedModeBanner: false,
-            
+
             // Localization
             localizationsDelegates: context.localizationDelegates,
             supportedLocales: context.supportedLocales,
             locale: localeProvider.locale ?? context.locale,
-            
+
             // Theme
             theme: themeProvider.lightTheme,
             darkTheme: themeProvider.darkTheme,
             themeMode: themeProvider.themeMode,
-            
+
             // Home
             home: const CalendarHomeScreen(),
           );
@@ -60,4 +60,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
